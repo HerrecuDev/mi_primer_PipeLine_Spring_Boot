@@ -1,6 +1,5 @@
 package org.iesdm.pipeline_spring_boot.controller;
 
-import org.iesdm.pipeline_spring_boot.controller.HelloController;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
