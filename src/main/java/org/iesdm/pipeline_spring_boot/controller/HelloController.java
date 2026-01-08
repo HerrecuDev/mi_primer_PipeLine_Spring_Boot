@@ -5,10 +5,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-public class HelloControler {
+public class HelloController {
 
     @GetMapping("/hello")
     public String hello(){
-        return "Hola desde mi primer PipeLine con Spring Boot!!";
+        return "Hola desde mi primer PipeLine con Spring Boot";
     }
 }
