@@ -1,3 +1,5 @@
+package org.iesdm.pipeline_spring_boot;
+
 import org.iesdm.pipeline_spring_boot.controller.HelloControler;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
