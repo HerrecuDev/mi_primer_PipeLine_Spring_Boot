@@ -8,6 +8,7 @@ public class PipeLineSpringBootApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(PipeLineSpringBootApplication.class, args);
+        
     }
 
 }
