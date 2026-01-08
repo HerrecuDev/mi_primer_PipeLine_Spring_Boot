@@ -1,41 +1,33 @@
 name: CI Spring Boot
 
-
-# Triggers : Ejecutamos este workflow
 on:
-
-  # Lo ejecutamos en cada push a main o develop
   push:
     branches: [ main, develop ]
-
-  # También en Pull Requests hacia main
   pull_request:
     branches: [ main ]
-
-# Trabajos que se jecutan:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout código
-        uses: actions/checkout@v4
+    - name: Checkout código
+      uses: actions/checkout@v4
 
-      - name: Configurar Java 21
-        uses: actions/setup-java@v4
-        with:
-          java-version: '21'
-          distribution: 'temurin'
+    - name: Configurar Java 21
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'temurin'
 
-      - name: Compilar y ejecutar tests
-        run: mvn -B test --file pom.xml
+    - name: Compilar y ejecutar tests
+      run: mvn -B test --file pom.xml
 
-      - name: Generar JAR ejecutable
-        run: mvn -B package -DskipTests --file pom.xml
+    - name: Generar JAR ejecutable
+      run: mvn -B package -DskipTests --file pom.xml
 
-      - name: Subir JAR como artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: app-jar
-          path: target/*.jar
+    - name: Subir JAR como artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-jar
+        path: target/*.jar
