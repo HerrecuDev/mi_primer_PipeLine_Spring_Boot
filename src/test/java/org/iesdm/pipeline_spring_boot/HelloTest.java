@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class HelloTest {
 
     @Test
-    void comprobacionHelloController(){
+    public void comprobacionHelloController(){
 
         //instancio el controlador:
         HelloControler controller = new HelloControler();
