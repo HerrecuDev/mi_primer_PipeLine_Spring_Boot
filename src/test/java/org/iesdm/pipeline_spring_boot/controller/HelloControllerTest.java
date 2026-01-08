@@ -1,12 +1,11 @@
-package org.iesdm.pipeline_spring_boot;
+package org.iesdm.pipeline_spring_boot.controller;
 
 import org.iesdm.pipeline_spring_boot.controller.HelloController;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@SpringBootTest
+
 public class HelloControllerTest {
 
     @Test
